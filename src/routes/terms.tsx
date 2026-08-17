@@ -23,7 +23,6 @@ import { TopBar } from "@/components/dark-vip/TopBar";
 import heroImg from "@/assets/terms-hero.jpg";
 import melbetLogo from "@/assets/melbet-logo.jpg";
 import gameApple from "@/assets/game-apple.jpg";
-import gameCrash from "@/assets/game-crash.jpg";
 import gameMines from "@/assets/game-mines.jpg";
 import stepTelegram from "@/assets/step-telegram.jpg";
 import stepDeposit from "@/assets/step-deposit.jpg";

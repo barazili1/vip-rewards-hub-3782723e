@@ -12,7 +12,6 @@ import { useState } from "react";
 import { toast } from "sonner";
 import logo from "@/assets/brand-logo.jpg";
 import gameApple from "@/assets/game-apple.jpg";
-import gameCrash from "@/assets/game-crash.jpg";
 import gameMines from "@/assets/game-mines.jpg";
 import { BrandName } from "@/components/dark-vip/BrandName";
 import { TopBar } from "@/components/dark-vip/TopBar";
