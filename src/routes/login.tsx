@@ -180,13 +180,13 @@ function LoginPage() {
             </h3>
             <div className="mt-5 flex items-center justify-center gap-3">
               <button
-                onClick={() => void navigate({ to: "/aviator" })}
+                onClick={() => void navigate({ to: "/mines" })}
                 className="group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border border-border"
               >
-                <img src={gameCrash} alt="Aviator" className="size-full object-cover" />
+                <img src={gameCrash} alt="Mines" className="size-full object-cover" />
                 <span className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 <span className="absolute inset-x-0 bottom-1.5 font-display text-[11px] font-bold text-foreground">
-                  Aviator
+                  Mines
                 </span>
               </button>
               <button

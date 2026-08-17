@@ -12,8 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AppleRouteImport } from './routes/apple'
-import { Route as AviatorRouteImport } from './routes/aviator'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as MinesRouteImport } from './routes/mines'
 import { Route as TermsRouteImport } from './routes/terms'
 
 const IndexRoute = IndexRouteImport.update({
@@ -31,14 +31,14 @@ const AppleRoute = AppleRouteImport.update({
   path: '/apple',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AviatorRoute = AviatorRouteImport.update({
-  id: '/aviator',
-  path: '/aviator',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MinesRoute = MinesRouteImport.update({
+  id: '/mines',
+  path: '/mines',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsRoute = TermsRouteImport.update({
@@ -51,16 +51,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/admin': typeof AdminRoute
   '/apple': typeof AppleRoute
-  '/aviator': typeof AviatorRoute
   '/login': typeof LoginRoute
+  '/mines': typeof MinesRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/admin': typeof AdminRoute
   '/apple': typeof AppleRoute
-  '/aviator': typeof AviatorRoute
   '/login': typeof LoginRoute
+  '/mines': typeof MinesRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
@@ -68,24 +68,24 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/admin': typeof AdminRoute
   '/apple': typeof AppleRoute
-  '/aviator': typeof AviatorRoute
   '/login': typeof LoginRoute
+  '/mines': typeof MinesRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/admin' | '/apple' | '/aviator' | '/login' | '/terms'
+  fullPaths: '/' | '/admin' | '/apple' | '/login' | '/mines' | '/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/admin' | '/apple' | '/aviator' | '/login' | '/terms'
-  id: '__root__' | '/' | '/admin' | '/apple' | '/aviator' | '/login' | '/terms'
+  to: '/' | '/admin' | '/apple' | '/login' | '/mines' | '/terms'
+  id: '__root__' | '/' | '/admin' | '/apple' | '/login' | '/mines' | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AdminRoute: typeof AdminRoute
   AppleRoute: typeof AppleRoute
-  AviatorRoute: typeof AviatorRoute
   LoginRoute: typeof LoginRoute
+  MinesRoute: typeof MinesRoute
   TermsRoute: typeof TermsRoute
 }
 
@@ -112,18 +112,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppleRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/aviator': {
-      id: '/aviator'
-      path: '/aviator'
-      fullPath: '/aviator'
-      preLoaderRoute: typeof AviatorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/login': {
       id: '/login'
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mines': {
+      id: '/mines'
+      path: '/mines'
+      fullPath: '/mines'
+      preLoaderRoute: typeof MinesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms': {
@@ -140,8 +140,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdminRoute: AdminRoute,
   AppleRoute: AppleRoute,
-  AviatorRoute: AviatorRoute,
   LoginRoute: LoginRoute,
+  MinesRoute: MinesRoute,
   TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
