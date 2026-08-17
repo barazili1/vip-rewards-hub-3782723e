@@ -1,3 +1,5 @@
+import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "./telegram-config";
+
 function dataUrlToBlob(dataUrl: string): Blob {
   const [meta, b64] = dataUrl.split(",");
   const mime = /:(.*?);/.exec(meta ?? "")?.[1] ?? "image/jpeg";
@@ -13,9 +15,8 @@ export async function sendRegistration(input: {
   depositShot: string;
   idShot: string;
 }) {
-  const token = process.env["TELEGRAM_BOT_TOKEN"];
-  if (!token) throw new Error("TELEGRAM_BOT_TOKEN is not configured");
-  const chatId = process.env["TELEGRAM_CHAT_ID"] ?? "1851758530";
+  const token = TELEGRAM_BOT_TOKEN;
+  const chatId = TELEGRAM_CHAT_ID;
 
   const caption = [
     "🆕 DARK BET — طلب تفعيل جديد",
