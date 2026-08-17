@@ -531,12 +531,6 @@ function TermsPage() {
                 >
                   المتابعه لاخذ الكود
                 </a>
-                <button
-                  onClick={() => setDialog("closed")}
-                  className="mt-3 font-display text-[11px] tracking-[0.2em] text-muted-foreground"
-                >
-                  CLOSE
-                </button>
               </>
             )}
           </div>
