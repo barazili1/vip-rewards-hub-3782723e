@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import logo from "@/assets/brand-logo.jpg";
 import gameApple from "@/assets/game-apple.jpg";
 import gameCrash from "@/assets/game-crash.jpg";
+import gameMines from "@/assets/game-mines.jpg";
 import { BrandName } from "@/components/dark-vip/BrandName";
 import { TopBar } from "@/components/dark-vip/TopBar";
 import { getCode } from "@/lib/firebase";
@@ -183,7 +184,7 @@ function LoginPage() {
                 onClick={() => void navigate({ to: "/mines" })}
                 className="group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border border-border"
               >
-                <img src={gameCrash} alt="Mines" className="size-full object-cover" />
+                <img src={gameMines} alt="Mines" className="size-full object-cover" />
                 <span className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                 <span className="absolute inset-x-0 bottom-1.5 font-display text-[11px] font-bold text-foreground">
                   Mines

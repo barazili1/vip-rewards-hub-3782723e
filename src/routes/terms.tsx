@@ -24,6 +24,7 @@ import heroImg from "@/assets/terms-hero.jpg";
 import melbetLogo from "@/assets/melbet-logo.jpg";
 import gameApple from "@/assets/game-apple.jpg";
 import gameCrash from "@/assets/game-crash.jpg";
+import gameMines from "@/assets/game-mines.jpg";
 import stepTelegram from "@/assets/step-telegram.jpg";
 import stepDeposit from "@/assets/step-deposit.jpg";
 import stepId from "@/assets/step-id.jpg";
@@ -442,7 +443,7 @@ function TermsPage() {
                     className={`group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border transition-colors ${selectedGame === "mines" ? "border-primary ring-2 ring-primary" : "border-border hover:border-primary/60"}`}
                   >
                     <img
-                      src={gameCrash}
+                      src={gameMines}
                       alt="Mines"
                       className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
