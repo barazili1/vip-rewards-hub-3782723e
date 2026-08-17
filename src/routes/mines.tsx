@@ -41,7 +41,9 @@ function MinesPage() {
     const idx = Array.from({ length: 25 }, (_, i) => i);
     for (let i = idx.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [idx[i], idx[j]] = [idx[j], idx[i]];
+      const tmp = idx[i]!;
+      idx[i] = idx[j]!;
+      idx[j] = tmp;
     }
     const picked = new Set(idx.slice(0, count));
     setCells(Array.from({ length: 25 }, (_, i) => picked.has(i)));
