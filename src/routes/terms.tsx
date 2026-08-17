@@ -527,7 +527,9 @@ function TermsPage() {
                   @B2BMEL
                 </p>
                 <a
-                  href="https://t.me/B2BMEL"
+                  href={`https://t.me/B2BMEL?text=${encodeURIComponent(
+                    `مرحبا ! اريد تفعيل الحساب الخاص بي\n\nUser id : ${idDigits}\nTelegram user : @${handle}`,
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 flex h-13 w-full items-center justify-center rounded-[15px] bg-foreground font-display text-sm font-extrabold text-background shadow-lg transition-transform active:scale-[0.98]"
