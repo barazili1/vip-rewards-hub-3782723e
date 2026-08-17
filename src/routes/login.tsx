@@ -21,15 +21,15 @@ import { clearSession, saveSession } from "@/lib/session";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "تسجيل الدخول — DARK VIP" },
+      { title: "تسجيل الدخول — DARK BET" },
       {
         name: "description",
-        content: "أدخل كود العضوية الخاص بك للدخول إلى تطبيق DARK VIP.",
+        content: "أدخل كود العضوية الخاص بك للدخول إلى تطبيق DARK BET.",
       },
-      { property: "og:title", content: "تسجيل الدخول — DARK VIP" },
+      { property: "og:title", content: "تسجيل الدخول — DARK BET" },
       {
         property: "og:description",
-        content: "أدخل كود العضوية الخاص بك للدخول إلى DARK VIP.",
+        content: "أدخل كود العضوية الخاص بك للدخول إلى DARK BET.",
       },
     ],
   }),
@@ -81,7 +81,7 @@ function LoginPage() {
           <div className="flex flex-col items-center">
             <img
               src={logo}
-              alt="شعار DARK VIP"
+              alt="شعار DARK BET"
               loading="lazy"
               width={816}
               height={816}
@@ -158,7 +158,7 @@ function LoginPage() {
         </section>
 
         <p className="mt-8 text-center text-[11px] tracking-widest text-muted-foreground">
-          DARK VIP © {new Date().getFullYear()}
+          DARK BET © {new Date().getFullYear()}
         </p>
       </main>
 

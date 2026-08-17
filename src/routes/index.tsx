@@ -6,16 +6,16 @@ import { BrandName } from "@/components/dark-vip/BrandName";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "DARK VIP — نادي التوقعات الحصري" },
+      { title: "DARK BET — نادي التوقعات الحصري" },
       {
         name: "description",
         content:
-          "DARK VIP تطبيق حصري للأعضاء: سجّل الدخول بكودك واستمتع بتجربة أنيقة بثيم أسود وذهبي.",
+          "DARK BET تطبيق حصري للأعضاء: سجّل الدخول بكودك واستمتع بتجربة أنيقة بثيم أسود وذهبي.",
       },
-      { property: "og:title", content: "DARK VIP — نادي التوقعات الحصري" },
+      { property: "og:title", content: "DARK BET — نادي التوقعات الحصري" },
       {
         property: "og:description",
-        content: "دخول حصري بالكود لأعضاء DARK VIP.",
+        content: "دخول حصري بالكود لأعضاء DARK BET.",
       },
     ],
   }),
@@ -42,7 +42,7 @@ function Splash() {
     <main className="flex min-h-screen flex-col items-center justify-center px-8">
       <img
         src={logo}
-        alt="شعار DARK VIP"
+        alt="شعار DARK BET"
         width={816}
         height={816}
         className="animate-glow-pulse size-36 object-contain"
