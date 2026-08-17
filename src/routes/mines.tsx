@@ -79,7 +79,7 @@ function MinesPage() {
             {Array.from({ length: 25 }).map((_, i) => (
               <span
                 key={i}
-                className="flex size-[70px] items-center justify-center overflow-hidden rounded-[20px] border border-border bg-secondary/30"
+                className="flex size-[60px] items-center justify-center overflow-hidden rounded-[12px] border border-border bg-secondary/30"
               >
                 {cells?.[i] ? (
                   <img
