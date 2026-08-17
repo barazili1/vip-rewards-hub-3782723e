@@ -108,7 +108,11 @@ function ApplePage() {
             {rowsTopDown.map((odd, rowFromTop) => {
               const row = 9 - rowFromTop; // 0 = bottom row (m1..m5)
               return (
-                <div key={odd} className="flex items-center justify-center gap-2">
+                <div
+                  key={`${odd}-${signals ? "s" : "e"}`}
+                  className={`flex items-center justify-center gap-2 ${signals ? "cell-pop" : ""}`}
+                  style={signals ? { animationDelay: `${row * 90}ms` } : undefined}
+                >
                   <span className="w-14 shrink-0 text-left font-display text-[11px] font-bold text-primary">
                     {odd.toFixed(2)}
                   </span>

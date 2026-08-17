@@ -86,7 +86,8 @@ function MinesPage() {
                     src={DIAMOND}
                     alt=""
                     loading="lazy"
-                    className="size-full object-cover"
+                    className="cell-pop size-full object-cover"
+                    style={{ animationDelay: `${i * 60}ms` }}
                   />
                 ) : null}
               </span>
