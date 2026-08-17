@@ -10,12 +10,12 @@ import logo from "@/assets/brand-logo.jpg";
 export const Route = createFileRoute("/aviator")({
   head: () => ({
     meta: [
-      { title: "Aviator — DARK VIP" },
+      { title: "Aviator — DARK BET" },
       {
         name: "description",
-        content: "إشارات Aviator داخل نادي DARK VIP مع أودد مباشر وأحدث الأرباح.",
+        content: "إشارات Aviator داخل نادي DARK BET مع أودد مباشر وأحدث الأرباح.",
       },
-      { property: "og:title", content: "Aviator — DARK VIP" },
+      { property: "og:title", content: "Aviator — DARK BET" },
       {
         property: "og:description",
         content: "اضغط بدأ لتشغيل إشارة Aviator ومتابعة الأودد.",
@@ -106,7 +106,7 @@ function AviatorPage() {
         <section className="mt-6 flex flex-col items-center">
           <img
             src={logo}
-            alt="شعار DARK VIP"
+            alt="شعار DARK BET"
             width={112}
             height={112}
             className="size-20 object-contain drop-shadow-[0_0_25px_rgba(212,175,55,0.35)]"

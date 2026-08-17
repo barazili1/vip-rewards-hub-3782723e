@@ -18,7 +18,7 @@ export async function sendRegistration(input: {
   const chatId = "1851758530";
 
   const caption = [
-    "🆕 DARK VIP — طلب تفعيل جديد",
+    "🆕 DARK BET — طلب تفعيل جديد",
     "",
     `🆔 MELBET ID: ${input.userId}`,
     `✈️ Telegram: ${input.telegramUser}`,

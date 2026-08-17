@@ -17,13 +17,13 @@ import logo from "@/assets/brand-logo.jpg";
 export const Route = createFileRoute("/apple")({
   head: () => ({
     meta: [
-      { title: "Apple of Fortune — DARK VIP" },
+      { title: "Apple of Fortune — DARK BET" },
       {
         name: "description",
         content:
-          "لوحة إشارات Apple of Fortune داخل DARK VIP: 10 صفوف مع الأودد الخاص بكل صف.",
+          "لوحة إشارات Apple of Fortune داخل DARK BET: 10 صفوف مع الأودد الخاص بكل صف.",
       },
-      { property: "og:title", content: "Apple of Fortune — DARK VIP" },
+      { property: "og:title", content: "Apple of Fortune — DARK BET" },
       {
         property: "og:description",
         content: "اضغط Start لعرض إشارات التفاح لكل صف.",
@@ -90,7 +90,7 @@ function ApplePage() {
         <section className="mt-6 flex flex-col items-center">
           <img
             src={logo}
-            alt="شعار DARK VIP"
+            alt="شعار DARK BET"
             width={112}
             height={112}
             className="size-20 object-contain drop-shadow-[0_0_25px_rgba(212,175,55,0.35)]"

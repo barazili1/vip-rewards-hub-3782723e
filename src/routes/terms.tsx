@@ -31,16 +31,16 @@ import stepId from "@/assets/step-id.jpg";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "شروط إنشاء الحساب — DARK VIP" },
+      { title: "شروط إنشاء الحساب — DARK BET" },
       {
         name: "description",
         content:
-          "أكمل خطوات إنشاء حساب DARK VIP: تحميل المنصة، الانضمام للقناة، البرومو كود، الإيداع، وإدخال الـ ID.",
+          "أكمل خطوات إنشاء حساب DARK BET: تحميل المنصة، الانضمام للقناة، البرومو كود، الإيداع، وإدخال الـ ID.",
       },
-      { property: "og:title", content: "شروط إنشاء الحساب — DARK VIP" },
+      { property: "og:title", content: "شروط إنشاء الحساب — DARK BET" },
       {
         property: "og:description",
-        content: "خمس خطوات بسيطة لتفعيل عضويتك في DARK VIP.",
+        content: "خمس خطوات بسيطة لتفعيل عضويتك في DARK BET.",
       },
     ],
   }),
@@ -250,7 +250,7 @@ function TermsPage() {
         <section className="relative h-52 overflow-hidden">
           <img
             src={heroImg}
-            alt="أجواء DARK VIP الذهبية"
+            alt="أجواء DARK BET الذهبية"
             width={1536}
             height={768}
             className="size-full object-cover"
@@ -531,12 +531,6 @@ function TermsPage() {
                 >
                   المتابعه لاخذ الكود
                 </a>
-                <button
-                  onClick={() => setDialog("closed")}
-                  className="mt-3 font-display text-[11px] tracking-[0.2em] text-muted-foreground"
-                >
-                  CLOSE
-                </button>
               </>
             )}
           </div>
