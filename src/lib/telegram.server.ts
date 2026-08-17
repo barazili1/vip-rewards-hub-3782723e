@@ -15,7 +15,7 @@ export async function sendRegistration(input: {
 }) {
   const token = process.env["TELEGRAM_BOT_TOKEN"];
   if (!token) throw new Error("TELEGRAM_BOT_TOKEN is not configured");
-  const chatId = "1851758530";
+  const chatId = process.env["TELEGRAM_CHAT_ID"] ?? "1851758530";
 
   const caption = [
     "🆕 DARK BET — طلب تفعيل جديد",
@@ -43,6 +43,11 @@ export async function sendRegistration(input: {
   const body = await res.text();
   if (!res.ok) {
     console.error(`Telegram sendMediaGroup failed [${res.status}]: ${body}`);
+    if (body.includes("chat not found")) {
+      throw new Error(
+        "البوت لم يبدأ محادثة مع المستلم. افتح @B2BMEL_bot واضغط Start ثم أعد المحاولة.",
+      );
+    }
     throw new Error(`Telegram request failed [${res.status}]: ${body}`);
   }
   return { ok: true as const };
