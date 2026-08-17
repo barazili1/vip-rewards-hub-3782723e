@@ -27,7 +27,7 @@ export const Route = createFileRoute("/mines")({
 });
 
 const DIAMOND =
-  "https://cdn.phototourl.com/free/2026-08-17-e3b71f26-b498-4c17-a686-b7c4abd7f85a.png";
+  "https://clientarea.turboclub.io/api/drive-thumb/1IvJCXdwbCzrWFMLfb4XWdJ062sRznZbE~BZPoz8QLHRzcLdeh";
 const PRESETS = [1, 3, 5, 10, 15];
 
 function MinesPage() {
@@ -86,7 +86,7 @@ function MinesPage() {
                     src={DIAMOND}
                     alt=""
                     loading="lazy"
-                    className="size-full object-contain p-1.5"
+                    className="size-full object-cover"
                   />
                 ) : null}
               </span>
