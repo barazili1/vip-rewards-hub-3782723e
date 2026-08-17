@@ -180,6 +180,7 @@ function TermsPage() {
   const [userId, setUserId] = useState("");
   const [telegramUser, setTelegramUser] = useState("");
   const [dialog, setDialog] = useState<"closed" | "loading" | "done">("closed");
+  const [selectedGame, setSelectedGame] = useState<"aviator" | "apple" | null>(null);
   const navigate = useNavigate();
   const sendToBot = useServerFn(submitRegistration);
   const checkTelegram = useServerFn(verifyTelegramUser);
@@ -435,9 +436,10 @@ function TermsPage() {
 
               {ready ? (
                 <div className="animate-rise mt-3 flex items-center justify-center gap-3">
-                  <Link
-                    to="/aviator"
-                    className="group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border border-border transition-colors hover:border-primary/60"
+                  <button
+                    type="button"
+                    onClick={() => setSelectedGame("aviator")}
+                    className={`group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border transition-colors ${selectedGame === "aviator" ? "border-primary ring-2 ring-primary" : "border-border hover:border-primary/60"}`}
                   >
                     <img
                       src={gameCrash}
@@ -448,10 +450,11 @@ function TermsPage() {
                     <span className="absolute inset-x-0 bottom-1.5 text-center font-display text-[11px] font-bold text-foreground">
                       Aviator
                     </span>
-                  </Link>
-                  <Link
-                    to="/apple"
-                    className="group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border border-primary/50 transition-colors hover:border-primary"
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedGame("apple")}
+                    className={`group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border transition-colors ${selectedGame === "apple" ? "border-primary ring-2 ring-primary" : "border-primary/50 hover:border-primary"}`}
                   >
                     <img
                       src={gameApple}
@@ -462,7 +465,7 @@ function TermsPage() {
                     <span className="absolute inset-x-0 bottom-1.5 text-center font-display text-[11px] font-bold text-primary">
                       Apple of fortune
                     </span>
-                  </Link>
+                  </button>
                 </div>
               ) : null}
             </StepCard>
