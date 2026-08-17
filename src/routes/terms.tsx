@@ -180,7 +180,7 @@ function TermsPage() {
   const [userId, setUserId] = useState("");
   const [telegramUser, setTelegramUser] = useState("");
   const [dialog, setDialog] = useState<"closed" | "loading" | "done">("closed");
-  const [selectedGame, setSelectedGame] = useState<"aviator" | "apple" | null>(null);
+  const [selectedGame, setSelectedGame] = useState<"mines" | "apple" | null>(null);
   const navigate = useNavigate();
   const sendToBot = useServerFn(submitRegistration);
   const checkTelegram = useServerFn(verifyTelegramUser);
@@ -361,7 +361,7 @@ function TermsPage() {
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { symbol: "$", value: "6.00", unit: "USD", note: "دولار" },
-                  { symbol: "E£", value: "300", unit: "EGP", note: "جنيه" },
+                  { symbol: "د", value: "1500", unit: "DINAR", note: "دينار" },
                 ].map((item) => (
                   <div
                     key={item.unit}
@@ -438,17 +438,17 @@ function TermsPage() {
                 <div className="animate-rise mt-3 flex items-center justify-center gap-3">
                   <button
                     type="button"
-                    onClick={() => setSelectedGame("aviator")}
-                    className={`group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border transition-colors ${selectedGame === "aviator" ? "border-primary ring-2 ring-primary" : "border-border hover:border-primary/60"}`}
+                    onClick={() => setSelectedGame("mines")}
+                    className={`group relative h-[100px] w-[150px] overflow-hidden rounded-[15px] border transition-colors ${selectedGame === "mines" ? "border-primary ring-2 ring-primary" : "border-border hover:border-primary/60"}`}
                   >
                     <img
                       src={gameCrash}
-                      alt="Aviator"
+                      alt="Mines"
                       className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <span className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
                     <span className="absolute inset-x-0 bottom-1.5 text-center font-display text-[11px] font-bold text-foreground">
-                      Aviator
+                      Mines
                     </span>
                   </button>
                   <button
